@@ -4,12 +4,88 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BMI Calculator</title>
-	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<style>
+		details {
+			font-size: 0.9rem;
+		}
+	</style>
 </head>
-<body>
-	
-	
+<body class="bg-dark">
+	<div class="container-lg bg-light" style='height: 100vh;'>
+		<h3 class="text-center pt-3">BMI Calculator</h3>
+		<details class="mx-5">
+			<summary class="text-primary">Important Note</summary>
+			<div class="ms-5">BMI (body mass index), which is based on the height and weight of a person, is an inaccurate measure of body fat content and does not take into account muscle mass, bone density, overall body composition, and racial and sex differences.</div>
+			<div class="ms-4">Here are a few articles which can help you find out why BMI is not just inaccurate but also problematic: </div>
+			<div class="ms-5"><a href="https://www.medicalnewstoday.com/articles/265215">Why BMI is inaccurate and misleading.</a></div>
+			<div class="ms-5"><a href="https://www.huffpost.com/entry/bmi-scale-racist-health_l_5f15a8a8c5b6d14c336a43b0">The BMI Is Racist And Useless. Here's How To Measure Health Instead.</a></div>
+			<div class="ms-5"><a href="https://journalofethics.ama-assn.org/article/how-use-bmi-fetishizes-white-embodiment-and-racializes-fat-phobia/2023-07">How the Use of BMI Fetishizes White Embodiment and Racializes Fat Phobia.</a></div>
+		</details>
+		
+		
+		<div class="row py-4 mx-5">
+			<div class="col border border-secondary rounded p-3 d-flex flex-column gap-2">
+				<div class="row d-flex align-items-center">
+					<div class="col-6">
+						<label class="form-label" for="age">Age:</label>
+						<input class="form-control border-secondary" type="text" id="age" />
+					</div>
+<!--
+					<div class="col h-100 d-flex align-items-center justify-content-center">
+						<div>
+							<input class="form-check-input me-1" type="radio" name="gender" id="male" value="male"/>
+							<label class="form-check-label me-4" for="male">Male</label>
+							<input class="form-check-input me-1" type="radio" name="gender" id="female" />
+							<label class="form-check-label" for="female">Female</label>
+						</div>
+					</div>
+-->
+				</div>
+				<div class="row">
+					<div class="col">
+						<label class="form-label" for="height">Height (in cms):</label>
+						<input class="form-control border-secondary" type="text" id="height" />
+					</div>
+					<div class="col">
+						<label class="form-label" for="weight">Weight (in kgs):</label>
+						<input class="form-control border-secondary" type="text" id="weight" />
+					</div>
+				</div>
+				<div class="row mt-4">
+					<div class="col text-center">
+						<button class="btn btn-success w-25">Calculate</button>
+					</div>
+					
+				</div>
+				<div class="row mt-3">
+					<div class="col text-center">
+						<p class="h4" id="message">Your BMI is 0</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="progress d-flex gap-1">
+							<div class="progress-bar bg-warning" style="width:25%;"></div>
+							<div class="progress-bar bg-success" style="width:25%"></div>
+							<div class="progress-bar" style="width:25%; background:darkorange"></div>
+							<div class="progress-bar bg-danger" style="width:25%"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row text-center">
+					<div class="col">Underweight</div>
+					<div class="col">Normal</div>
+					<div class="col">Overweight</div>
+					<div class="col">Obese</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	<script src="script.js" type="text/javascript"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
