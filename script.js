@@ -43,23 +43,32 @@ button.addEventListener('click', calculate);
 
 function calculate(){
 	if(toggle.checked){
-		let totalInches = parseInt(foot.value*12) + parseInt(inches.value);
-		let weightInPounds = parseInt(weight.value) * 2.204622621849;
-		let result = (Math.round(weightInPounds / ((totalInches**2))*100)/100)*703;
-		message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
-		changeColor(result);
-	} else {
-		if(height.value != ''){
-		if(weight.value != ''){
-			let result = Math.round((weight.value / ((height.value/100)**2)*100))/100;
-			message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
-			changeColor(result);
+		if(foot.value != '' && inches.value != ''){
+			if(weight.value != ''){
+				let totalInches = parseInt(foot.value*12) + parseInt(inches.value);
+				let weightInPounds = parseInt(weight.value) * 2.204622621849;
+				let result = (Math.round(weightInPounds / ((totalInches**2))*100)/100)*703;
+				message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
+				changeColor(result);
 			} else {
 				message.textContent = 'Enter Weight'
 			}
 		} else {
 			message.textContent = 'Enter Height'
 		}
+		
+	} else {
+		if(height.value != ''){
+			if(weight.value != ''){
+				let result = Math.round((weight.value / ((height.value/100)**2)*100))/100;
+				message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
+				changeColor(result);
+				} else {
+					message.textContent = 'Enter Weight'
+				}
+			} else {
+				message.textContent = 'Enter Height'
+			}
 	}
 }
 
