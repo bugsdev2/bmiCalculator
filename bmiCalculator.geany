@@ -28,8 +28,8 @@ long_line_column=72
 
 [files]
 current_page=1
-FILE_NAME_0=3793;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fbugs%2FProjects%2FbmiCalculator%2Findex.html;0;4
-FILE_NAME_1=906;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fbugs%2FProjects%2FbmiCalculator%2Fscript.js;0;4
+FILE_NAME_0=1066;HTML;0;EUTF-8;1;1;0;%2Fhome%2Fbugs%2FProjects%2FbmiCalculator%2Findex.html;0;4
+FILE_NAME_1=1797;Javascript;0;EUTF-8;1;1;0;%2Fhome%2Fbugs%2FProjects%2FbmiCalculator%2Fscript.js;0;4
 
 [VTE]
 last_dir=/home/bugs/Projects/bmiCalculator

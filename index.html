@@ -28,25 +28,31 @@
 		<div class="row py-4 mx-5">
 			<div class="col border border-secondary rounded p-3 d-flex flex-column gap-2">
 				<div class="row d-flex align-items-center">
-					<div class="col-6">
-						<label class="form-label" for="age">Age:</label>
-						<input class="form-control border-secondary" type="text" id="age" />
-					</div>
-<!--
-					<div class="col h-100 d-flex align-items-center justify-content-center">
-						<div>
-							<input class="form-check-input me-1" type="radio" name="gender" id="male" value="male"/>
-							<label class="form-check-label me-4" for="male">Male</label>
-							<input class="form-check-input me-1" type="radio" name="gender" id="female" />
-							<label class="form-check-label" for="female">Female</label>
+					<div class="d-flex justify-content-center gap-2">
+						<span class="me-2" id="p_centi">Height in Centimetres</span>
+						<div class="form-check form-switch">
+							<input type="checkbox" name="toggle" id="toggle" class="form-check-input"/>
 						</div>
+						<span id="p_foot">Height in Foot and Inches</span>
 					</div>
--->
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col" id="centimetres">
 						<label class="form-label" for="height">Height (in cms):</label>
 						<input class="form-control border-secondary" type="text" id="height" />
+					</div>
+					<div class="col" style='display:none' id="footInches-container">
+						<label for="height" class="form-label">Height (in Foot and Inches)</label>
+						<div class="d-flex align-items-center gap-2">
+							<div class="col-3">
+								<input class="form-control border-secondary" id="foot" type="text" />
+							</div>
+							<span>Foot</span>
+							<div class="col-3">
+								<input class="form-control border-secondary" id="inches" type="text" />
+							</div>
+							<span>Inches</span>
+						</div>
 					</div>
 					<div class="col">
 						<label class="form-label" for="weight">Weight (in kgs):</label>
@@ -74,11 +80,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="row text-center">
-					<div class="col">Underweight</div>
-					<div class="col">Normal</div>
-					<div class="col">Overweight</div>
-					<div class="col">Obese</div>
+				<div class="row text-center px-2">
+					<div class="col">
+						<div>Underweight</div>
+						<div>< 18.5</div>
+					</div>
+					<div class="col">
+						<div>Normal</div>
+						<div>18.5 - 24.9</div>
+					</div>
+					<div class="col">
+						<div>Overweight</div>
+						<div>25 - 29.9</div>
+					</div>
+					<div class="col">
+						<div>Obese</div>
+						<div>> 30</div>
+					</div>
 				</div>
 			</div>
 		</div>
