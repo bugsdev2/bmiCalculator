@@ -10,10 +10,16 @@
 		details {
 			font-size: 0.9rem;
 		}
+		
+		@media screen and (max-width: 576px) {
+			.details {
+				display: none;
+			} 
+		}
 	</style>
 </head>
-<body class="bg-dark">
-	<div class="container-lg bg-light" style='height: 100vh;'>
+<body>
+	<div class="container-lg bg-light" style='height: 100%;'>
 		<h3 class="text-center pt-3">BMI Calculator</h3>
 		<details class="mx-5">
 			<summary class="text-primary">Important Note</summary>
@@ -25,10 +31,10 @@
 		</details>
 		
 		
-		<div class="row py-4 mx-5">
+		<div class="row py-4 mx-5" id="test">
 			<div class="col border border-secondary rounded p-3 d-flex flex-column gap-2">
 				<div class="row d-flex align-items-center">
-					<div class="d-flex justify-content-center gap-2">
+					<div class=" col d-flex justify-content-center gap-2">
 						<span class="me-2" id="p_centi">Height in Centimetres</span>
 						<div class="form-check form-switch">
 							<input type="checkbox" name="toggle" id="toggle" class="form-check-input"/>
@@ -37,11 +43,11 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col" id="centimetres">
+					<div class="col-sm-6" id="centimetres">
 						<label class="form-label" for="height">Height (in cms):</label>
 						<input class="form-control border-secondary" type="text" id="height" />
 					</div>
-					<div class="col" style='display:none' id="footInches-container">
+					<div class="col-sm-6" style='display:none' id="footInches-container">
 						<label for="height" class="form-label">Height (in Foot and Inches)</label>
 						<div class="d-flex align-items-center gap-2">
 							<div class="col-3">
@@ -54,14 +60,14 @@
 							<span>Inches</span>
 						</div>
 					</div>
-					<div class="col">
+					<div class="col-sm-6">
 						<label class="form-label" for="weight">Weight (in kgs):</label>
 						<input class="form-control border-secondary" type="text" id="weight" />
 					</div>
 				</div>
 				<div class="row mt-4">
 					<div class="col text-center">
-						<button class="btn btn-success w-25">Calculate</button>
+						<button class="btn btn-success">Calculate</button>
 					</div>
 					
 				</div>
@@ -82,20 +88,20 @@
 				</div>
 				<div class="row text-center px-2">
 					<div class="col">
-						<div>Underweight</div>
-						<div>< 18.5</div>
+						<div class="details">Underweight</div>
+						<div> &lt;8.5</div>
 					</div>
 					<div class="col">
-						<div>Normal</div>
+						<div class="details">Normal</div>
 						<div>18.5 - 24.9</div>
 					</div>
 					<div class="col">
-						<div>Overweight</div>
+						<div class="details">Overweight</div>
 						<div>25 - 29.9</div>
 					</div>
 					<div class="col">
-						<div>Obese</div>
-						<div>> 30</div>
+						<div class="details">Obese</div>
+						<div> &gt;30</div>
 					</div>
 				</div>
 			</div>
