@@ -46,8 +46,9 @@ function calculate(){
 		if(foot.value != '' && inches.value != ''){
 			if(weight.value != ''){
 				let totalInches = parseInt(foot.value*12) + parseInt(inches.value);
-				let weightInPounds = parseInt(weight.value) * 2.204622621849;
-				let result = (Math.round(weightInPounds / ((totalInches**2))*100)/100)*703;
+				let weightInPounds = parseInt(weight.value) * 2.20462;
+				let result = Math.round(((weightInPounds / (totalInches**2))*703)*100)/100;
+				console.log(weightInPounds, totalInches, result);
 				message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
 				changeColor(result);
 			} else {
