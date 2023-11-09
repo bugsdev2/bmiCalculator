@@ -12,6 +12,11 @@ const messageContainer = document.getElementById('message');
 const toggle = document.getElementById('toggle');
 
 
+document.querySelector('body').addEventListener('keyup', enterClick);
+function enterClick(e){
+	if(e.key === 'Enter') calculate();
+}
+
 if(toggle.checked){
 	footInches.style.display = "block";
 	centimetres.style.display = "none";
@@ -46,9 +51,8 @@ function calculate(){
 		if(foot.value != '' && inches.value != ''){
 			if(weight.value != ''){
 				let totalInches = parseInt(foot.value*12) + parseInt(inches.value);
-				let weightInPounds = parseInt(weight.value) * 2.20462;
+				let weightInPounds = parseFloat(weight.value) * 2.20462;
 				let result = Math.round(((weightInPounds / (totalInches**2))*703)*100)/100;
-				console.log(weightInPounds, totalInches, result);
 				message.innerHTML = `Your BMI is ${result} <br> You are ${changeColor(result)}`;
 				changeColor(result);
 			} else {
